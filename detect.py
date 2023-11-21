@@ -122,10 +122,11 @@ def run(
                     annotator.box_label(xyxy, label, color=colors(c, True))
                     # img에 bbox 추가하는 코드
 
-            cv2.imwrite(save_path, im0)
+            cv2.imshow(im0)
+            cv2.waitKey(0)
             # img 저장하는 부분 -> return으로 변경 필요
 
-    with open(f'{save_dir}/data.json', 'a') as f:
-        json.dump(class_dict, f, ensure_ascii=False, indent=4)
+    #with open(f'{save_dir}/data.json', 'a') as f:
+    #    json.dump(class_dict, f, ensure_ascii=False, indent=4)
     # ---------- 클래스 별로 객체 개수 json 저장---------
     # -> return 으로 변경 필요
