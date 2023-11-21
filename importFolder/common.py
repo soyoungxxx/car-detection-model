@@ -26,7 +26,7 @@ def yaml_load(file='data.yaml'):
 class DetectMultiBackend(nn.Module):
     # YOLOv5 MultiBackend class for python inference on various backends
     def __init__(self, weights='best.pt', device=torch.device('cpu'), dnn=False, data=None, fp16=False, fuse=True):
-        from models.experimental import attempt_load  # scoped to avoid circular import
+        from experimental import attempt_load  # scoped to avoid circular import
 
         super().__init__()
         w = str(weights[0] if isinstance(weights, list) else weights)

@@ -6,10 +6,10 @@ import json
 
 from ultralytics.utils.plotting import Annotator, colors
 
-from dataloader import LoadImages;
-from common import DetectMultiBackend
+from importFolder.dataloader import LoadImages;
+from importFolder.common import DetectMultiBackend
 
-from general import (Profile, check_img_size, check_version,
+from importFolder.general import (Profile, check_img_size, check_version,
                     non_max_suppression, scale_boxes)
 #필요한 코드 import
 
